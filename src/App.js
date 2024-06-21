@@ -17,7 +17,7 @@ function App() {
     event.preventDefault();
     try {
       console.log(message);
-      const response = await axios.post('http://127.0.0.1:5000/predict', { message });
+      const response = await axios.post('https://literate-legally-opossum.ngrok-free.app/predict', { message });
       setPrediction(response.data.prediction);
     } catch (error) {
       console.error('Error:', error);
